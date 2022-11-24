@@ -1,15 +1,21 @@
 #  Resource Group Name
 variable "resourceGroupName" {
   type    = string
-  default = "RG-VM"
+  default = "RG-VM-Terra-Formation-YZHAO"
 }
 
+#  Resource Group Region
 variable "azureRegion" {
   description = "Azure Region where to deploy resources. Caution the region must support Availability Zone"
   # To get names of Azure Region : az account list-locations
   # To check support of Availability Zone in the Azure Region see https://docs.microsoft.com/bs-latn-ba/azure/availability-zones/az-overview
   type    = string
   default = "westus"
+}
+
+variable "public_ip_name" {
+  type    = string
+  default = "public-ip-vm"
 }
 
 variable "vnetName" {

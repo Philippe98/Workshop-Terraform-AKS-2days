@@ -9,11 +9,21 @@ variable "azureRegion" {
 #  Resource Group Name
 variable "resourceGroupName" {
   type    = string
-  default = "RG-AKSCluster"
+  default = "ResourceGroup-YZHAO"
+}
+
+#  Resource Group Tag Name 
+variable "resourceGroupTag" {
+  type    = map(string)
+  default = {
+    "owner" = "yucong.zhao@exakis-nelite.com"
+    "env" = "test_formation"
+    "case" = "test_for_update"
+  }
 }
 
 #  Storage Account Name
 variable "storageAccountBackendTerraform" {
   type    = string
-  default = "terraformstan" # IMPORTANT mettre ici un nom unique. cf https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming#example-names-storage
+  default = "terraformformationyz" # IMPORTANT mettre ici un nom unique. cf https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming#example-names-storage
 }
