@@ -13,6 +13,13 @@ variable "azureRegion" {
   default = "westus"
 }
 
+variable "vm_rg_tags" {
+  type = map(string)
+  default = {
+    "owner" = "yucong.zhao@exakis-nelite.com"
+  }
+}
+
 variable "public_ip_name" {
   type    = string
   default = "public-ip-vm"
