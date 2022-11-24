@@ -12,6 +12,12 @@ variable "resourceGroupName" {
   default = "RG-DemoGitHub-YZHAO"
 }
 
+variable "pipeline_rg_tags" {
+  type = map(string)
+  default = {
+    "owner" = "yucong.zhao@exakis-nelite.com"
+  }
+}
 
 # Variables pour l'authentification du provider Terraform  
 variable "AzureSubscriptionID" {
