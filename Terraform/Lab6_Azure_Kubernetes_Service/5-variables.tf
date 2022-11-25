@@ -10,20 +10,20 @@ variable "azure_region" {
 #  Resource Group Name
 variable "resource_group" {
   type    = string
-  default = "RG-AKSCluster"
+  default = "ResourceGroup-YZHAO"
 }
 
 # Virtual Network name
 variable "aks_vnet_name" {
     type = string
-    default = "aksvnet"
+    default = "aksvnet-YZHAO2022"
 }
 
 
 # AKS Cluster name
 variable "cluster_name" {
   type    = string
-  default = "AKS-000"
+  default = "AKS-YZHAO2022"
 }
 
 #AKS DNS name
@@ -74,7 +74,7 @@ variable "admin_username" {
 variable "kubernetes_version" {
   description = "Version of Kubernetes to deploy"
   type        = string
-  default     = "1.22.6"
+  default     = "1.25.2"
 }
 
 
