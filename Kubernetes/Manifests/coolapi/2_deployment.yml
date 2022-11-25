@@ -18,6 +18,13 @@ spec:
           image: "acryucongzhao2022.azurecr.io/coolapi:1.0.0"
           ports:
           - containerPort: 3000
+          livenessProbe:
+            exec:
+              command:
+              - cat
+              - /tmp/healthy
+            initialDelaySeconds: 5
+            periodSeconds: 5
           readinessProbe:
             exec:
               command:
